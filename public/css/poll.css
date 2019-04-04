@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+header {
+    background-color: #006400;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+#poll-question {
+    text-transform: capitalize;
+    color: #006400;
+    font-weight: bold;
+}
+
+.label-text {
+    color: #006400;
+    font-weight: bold;
+}
+
+.dark-grey {
+    color: #2f4f4f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#copyLink {
+    margin-top: 10px;
+}
+
+.voted {
+    cursor: not-allowed;
+    background-color: #00a000;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+
+    #poll-question {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+
+    #poll-question {
+        font-size: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .card-body {
+        padding: 0.75rem;
+    }
+}
