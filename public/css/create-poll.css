@@ -31,6 +31,21 @@ header h1 {
     margin: 5px 0; 
 }
 
+#options .form-group {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-column-gap: 10px;
+}
+
+#options .form-group input {
+    margin: 0;
+}
+
+#options .form-group button {
+    margin: 0;
+    padding: 0;
+}
+
 @media only screen and (max-width: 768px) {
     header {
         height: 90px;
