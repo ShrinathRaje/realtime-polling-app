@@ -44,8 +44,7 @@
                                     <input type="radio" name="pollOption" class="pollOption form-radio-input" value="<%= i %>"
                                         required 
                                         <% if(vote) { if(parseInt(vote.option) == i) {%> checked <%} else {%> disabled <%} } %> >
-                                    <%= option %> (<span class="voteCount">
-                                        <%= poll.votes[i] %></span>)
+                                    <%= option %> (<span class="voteCount"><%= poll.votes[i] %></span>)
                                 </label>
                             </div>
                         </li>
