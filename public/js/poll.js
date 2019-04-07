@@ -50,3 +50,7 @@ document.getElementById('copyLink').addEventListener('click', (event) => {
     document.execCommand('copy');
     event.target.innerHTML = "Copied &#9989";
 });
+
+document.getElementById('stats-btn').addEventListener('click', (event) => {
+    window.location.href = `${URL}/stats`;
+});

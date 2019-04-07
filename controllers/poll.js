@@ -53,3 +53,17 @@ module.exports.postVote = (req, res, next) => {
             console.log(err);
         });
 };
+
+module.exports.getStats = (req, res, next) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'stats.html'));
+};
+
+module.exports.getStatsAsync = (req, res, next) => {
+    Poll.getPollById(req.params.id)
+        .then(poll => {
+            res.json(poll);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};

@@ -13,4 +13,8 @@ router.get('/poll/:id', pollController.getPoll);
 
 router.post('/poll/:id', pollController.postVote);
 
+router.get('/poll/:id/stats', pollController.getStats);
+
+router.get('/poll/:id/statistics', pollController.getStatsAsync);
+
 module.exports = router;
