@@ -16,7 +16,7 @@ xhr.onreadystatechange = function() {
             exportEnabled: true,
             animationEnabled: true,
             title:{
-                text: poll.title,
+                text: poll.question,
                 fontColor: "#006400"
             },
             legend:{
