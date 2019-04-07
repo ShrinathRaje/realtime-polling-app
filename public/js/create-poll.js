@@ -35,8 +35,9 @@ function validateForm(event) {
     if(optionNumber < 2) {
         const msg = 'error: minimum 2 options required!';
         document.getElementById('error-msg').innerHTML = msg;
+        setTimeout(clearMsg, 2000);
     } else {
-        document.getElementById('error-msg').innerHTML = '';
+        clearMsg();
         event.target.submit();
     }
 }
@@ -52,4 +53,8 @@ function removeOption(event) {
     --optionNumber;
 
     //console.log(optionNumber);
+}
+
+function clearMsg() {
+    document.getElementById('error-msg').innerHTML = '';
 }
