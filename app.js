@@ -11,12 +11,14 @@ app.set('views', 'views');
 
 const rootDir = require('./util/path-helper');
 const mainRoutes = require('./routes/main');
+const errorController = require('./controllers/error');
 const mongoConnect = require('./util/database').mongoConnect;
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(rootDir, "public")));
 app.use(mainRoutes);
+app.use(errorController.get404);
 
 mongoConnect( () => {
     const PORT = process.env.PORT || 3000;
